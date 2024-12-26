@@ -1,0 +1,61 @@
+﻿<Window x:Class="Triangle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Triangle"
+        mc:Ignorable="d"
+        Title="Triangle" Height="500" Width="800" Background="#42aaff">
+    <Grid>
+        <Grid Name="grid_main" Visibility="Visible">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <TextBox Text="Введите длины сторон треугольника" FontStyle="Italic" Background="#42aaff" FontSize="26" Grid.Row="1" Grid.ColumnSpan="3" VerticalContentAlignment="Center" HorizontalAlignment="Center" IsReadOnly="True" BorderThickness="0,0,0,0" />
+            <TextBox Name="A_tb" Background="#a8b6e3" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" FontSize="25" HorizontalAlignment="Center" Height="60" Width="200" />
+            <TextBox Name="B_tb" Background="#a8b6e3" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" FontSize="25" HorizontalAlignment="Center" Height="60" Width="200" />
+            <TextBox Name="C_tb" Background="#a8b6e3" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" FontSize="25" HorizontalAlignment="Center" Height="60" Width="200" />
+
+            <Button Click="Button_Click1" Content="Проверить"  Background="#7851a9" FontSize="20" Grid.Column="1" Grid.Row="3" Width="200" Height="60" RenderTransformOrigin="0.489,0.211"/>
+        </Grid>
+        <Grid Name="grid_for_answer" Visibility="Hidden">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="1" Margin="0,32,0,87" FontSize="20" HorizontalContentAlignment="Center" FontStyle="Italic" Content="Ответ:" Grid.RowSpan="2"/>
+            <TextBox Name="ans_tb" 
+                     FontSize="26" 
+                     VerticalContentAlignment="Center" 
+                     HorizontalAlignment="Center"  
+                     Width="700"
+                     Background="#a8b6e3"
+                     TextWrapping="Wrap" 
+                     AcceptsReturn="True"
+                     Grid.Column="0" 
+                     Grid.ColumnSpan="3" 
+                     Grid.Row="1" 
+                     Grid.RowSpan="2">
+            </TextBox>
+            <Button Click="Button_Click2" Content="Вернуться" Background="#7851a9" FontSize="20" Grid.Column="1" Grid.Row="3" Width="200" Height="60"/>
+        </Grid>
+    </Grid>
+</Window>
